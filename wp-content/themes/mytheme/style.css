@@ -1,0 +1,131 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    letter-spacing: 2px
+}
+
+#my-popup {
+    display: none;
+    background-color: #00000098;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+#contactForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    max-width: 350px;
+    align-items: flex-start;
+}
+
+.top-popup {
+    display: flex;
+    justify-content: space-between;
+}
+#my-popup.my-popup.show {
+    display: flex;
+}
+
+#my-button, #close-button {
+    border: none;
+    background-color: unset;
+    color: #333333;
+    cursor: pointer;
+}
+
+.formName {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 100;
+    margin-left: 15%;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#contactPhone, #contactName {
+    font-size: 16px;
+    width: max-content;
+    max-width: 300px;
+    height: 40px;
+    font-weight: 100;
+}
+
+#checkbox-at {
+    position: absolute;
+    opacity: 0;
+    & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+      & + label:before {
+        content: '';
+        margin: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 40px;
+        height: 20px;
+        background: white;
+        border: 1px solid #333333;
+      }
+      
+      &:disabled + label {
+        color: #b8b8b8;
+        cursor: auto;
+      }
+     
+      &:disabled + label:before {
+        box-shadow: none;
+        background: #ddd;
+      }
+      &:checked + label:after {
+        content: '';
+        position: absolute;
+        left: 16px;
+        top: 33px;
+        background: white;
+        width: 2px;
+        height: 2px;
+        box-shadow: 
+          2px 0 0 #333333,
+          4px 0 0 #333333,
+          4px -2px 0 #333333,
+          4px -4px 0 #333333,
+          4px -6px 0 #333333,
+          4px -8px 0 #333333;
+        transform: rotate(45deg);
+      }
+}
+.bot-send-mail {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 100;
+    width: 100%;
+    height: 40px;
+    border: none;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+.bot-send-mail:hover {
+    background-color: #ffffff;
+    border: 1px solid #333333;
+    color: #333333;
+    cursor: pointer;
+}
